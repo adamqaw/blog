@@ -1,10 +1,10 @@
 # blog
-WIP portfolio blog. No bootstrap, no HTML template, no CSS template, Flask backend.
+WiP portfolio blog. No bootstrap, no HTML template, no CSS template, Flask backend.
 
 
 ### Feb 1 2022 Initial Commit notes:
 
-- Added all WIP files for use on other systems
+- Added all WiP files for use on other systems
 - Padding on some divs need tweaking
 - Microservices needs to be moved up on index.html
 - Microservices structure needs to be changed

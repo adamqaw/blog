@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Adam Qawasmeh</title>
+    <link href="/static/css/styles.css" rel="stylesheet">
+    <link href="/static/favicon.ico" rel="icon">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Playfair+Display&family=Style+Script&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+<div class="top" id="top-of-page">
+    <a name="top"></a>
+<!--    <img alt="cloud-img.png" class="top-cloud" src="/static/images/cloud.png">-->
+    <h1>A little bit of everything</h1>
+    <h2><em>a portfolio website</em></h2>
+<!--    <img alt="cloud-img.png" class="bottom-cloud" src="/static/images/cloud.png">-->
+    <img class="header-img" alt="city-img.png" src="/static/images/city.png">
+</div>
+<div class="middle-container" id="about">
+    <div class="profile">
+        <!--    <img class="profpic" src="/static/images/adam.png">-->
+        <h2>Hello!</h2>
+        <p class="intro">My name is Adam Al-Qawasmeh and this page will demonstrate a few of my skills with regards to
+            Web Dev.</p>
+
+    </div>
+    <hr>
+    <div class="skills">
+        <h2>My Skills.</h2>
+        <div class="skill-row">
+            <img class="icon2" src="/static/images/computer.png">
+            <h3>Python3</h3>
+            <p>I started learning Python3 recently and am proficient in the field of data analysis, with link projects
+                on my website. I am proficient with the following modules: Pandas, NumPy, Matplotlib, and still learning
+                more.
+            </p>
+        </div>
+        <div class="skill-row">
+            <img class="icon1" src="/static/images/chillies.png">
+            <h3>Microsoft Suite</h3>
+            <p>I have over 10 years of experience using the Microsoft Suite, including my years at University and High
+                school. I am proficient in Excel, Word and PowerPoint.
+            </p>
+        </div>
+    </div>
+    <hr>
+    <div class="contact-me">
+        <h2>Get In Touch</h2>
+        <h3>... </h3>
+        <p>I enjoy speaking to prospective partners and employers via social media and zoom.<br> Feel free to contact me
+            in your most convenient way, and I will definitely make the time.
+            <br>
+            <!--      <br>... or you could contact me if you just want to run some 5v5's at the park ;)</p>-->
+            <a class="btn" href="mailto:adam.qaw@gmail.com">EMAIL ME</a>
+    </div>
+</div>
+
+<div id="services" class="services-container">
+    <div class="profile">
+        <h2>
+            A few microservices
+        </h2>
+    </div>
+    <div class="grid-container">
+
+      <div class="grid-item">
+        Weather API
+      </div>
+      <div class="grid-item">
+        Y-Finance API
+      </div>
+      <div class="grid-item">
+        Books API
+      </div>
+      <div class="grid-item">
+<!--        News API-->
+          <form action="{{url_for('news')}}"><button class="btn">News API</button></form>
+
+      </div>
+    </div>
+</div>
+
+<a class="btn back-to-top-anim" href="#top" type="button">Back to top ↑</a>
+<div class="bottom-container">
+    <a class="footer-link" href="https://www.linkedin.com/in/adamqawasmeh/">LinkedIn</a>
+    <a class="footer-link" href="https://twitter.com/adamq98">Twitter</a>
+    <a class="footer-link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Website</a>
+    <p class="copyright"> ©2021 Adam Al-Qawasmeh</p>
+</div>
+</body>
+</html>

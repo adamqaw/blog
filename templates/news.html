@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adam Blog - News</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+
+<h1> Recent Stories</h1>
+
+{% for i in titles %}
+<h3>    {{ i }}</h3>
+    {% endfor %}
+{% for i in descriptions %}
+<p> {{ i }}</p>
+{% endfor %}
+
+
+
+
+</body>
+</html>

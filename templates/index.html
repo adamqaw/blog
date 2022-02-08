@@ -19,6 +19,32 @@
 <!--    <img alt="cloud-img.png" class="bottom-cloud" src="/static/images/cloud.png">-->
     <img class="header-img" alt="city-img.png" src="/static/images/city.png">
 </div>
+
+<div id="services" class="services-container">
+    <div class="profile">
+        <h2>
+            A few microservices
+        </h2>
+    </div>
+    <div class="grid-container">
+
+      <div class="grid-item">
+<!--        Weather API-->
+          <form action="{{url_for('weather')}}"><button class="btn">Weather API</button></form>
+      </div>
+      <div class="grid-item">
+        Finance API
+      </div>
+      <div class="grid-item">
+        Books API
+      </div>
+      <div class="grid-item">
+<!--        News API-->
+          <form action="{{url_for('news')}}"><button class="btn">News API</button></form>
+
+      </div>
+    </div>
+</div>
 <div class="middle-container" id="about">
     <div class="profile">
         <!--    <img class="profpic" src="/static/images/adam.png">-->
@@ -58,30 +84,6 @@
     </div>
 </div>
 
-<div id="services" class="services-container">
-    <div class="profile">
-        <h2>
-            A few microservices
-        </h2>
-    </div>
-    <div class="grid-container">
-
-      <div class="grid-item">
-        Weather API
-      </div>
-      <div class="grid-item">
-        Y-Finance API
-      </div>
-      <div class="grid-item">
-        Books API
-      </div>
-      <div class="grid-item">
-<!--        News API-->
-          <form action="{{url_for('news')}}"><button class="btn">News API</button></form>
-
-      </div>
-    </div>
-</div>
 
 <a class="btn back-to-top-anim" href="#top" type="button">Back to top ↑</a>
 <div class="bottom-container">

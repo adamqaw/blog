@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adam Blog - Weather</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+
+<div class="middle-container">
+    <h2>
+        The weather now is: {{ weather['weather'][0]['description'] }} at {{ weather['main']['temp'] }}°C and feels like {{ weather['main']['feels_like'] }}°C
+    </h2>
+</div>
+
+</body>
+</html>

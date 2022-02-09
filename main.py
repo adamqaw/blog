@@ -1,12 +1,12 @@
 from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy.orm import relationship
-from flask_login import UserMixin, login_user, LoginManager, login_required, current_user, logout_user
-import requests
 from weather import Weather
 from forms import NewPost
 from news import News
 import datetime as dt
+
+# from sqlalchemy.orm import relationship
+# from flask_login import UserMixin, login_user, LoginManager, login_required, current_user, logout_user
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'asd2376qudyafcgab81'
@@ -27,26 +27,18 @@ class NewsArticles(db.Model):
     date = db.Column(db.String(10))
 
 
+# Run once, then comment out. Wait for the blog.db file to show up (2-3 mins) before interacting with the webpage.
+# ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓
 # db.create_all()
-
-# ------------------- NEWS API------------------- # 
-API_KEY = "421ce3a588544ae193f3492f77956d73"
-# country = input('Country: ')
-country = 'ca'
-# query = input('What are you searching for?')
-
-top_headlines_endpoint = f'https://newsapi.org/v2/top-headlines?country={country}&apiKey={API_KEY}'
-# everything_endpoint = f'https://newsapi.org/v2/everything?q={query}&apiKey={API_KEY}'
-
-top_headlines_endpoint_response = requests.get(f'{top_headlines_endpoint}').json()
-
-
-# everything_endpoint_response = requests.get(f'{everything_endpoint}')
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
     # Configure forms and post to db
-    if not dt.datetime.today():
+    if NewsArticles.query.date() != dt.datetime.today():  # If the last db entry date is not equal to current date, refresh headlines.
+
+        db.session.query(NewsArticles).delete()  # Deletes all rows in the table to make way for new headlines.
+        db.session.commit()
+
         for i in range(len(News.article_titles)):
             new_post = NewPost(
                 title=News.article_titles[i],

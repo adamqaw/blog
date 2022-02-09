@@ -1,4 +1,5 @@
 import requests
+from forms import NewPost
 
 API_KEY = "421ce3a588544ae193f3492f77956d73"
 # country = input('Country: ')
@@ -14,43 +15,41 @@ top_headlines_endpoint_response = requests.get(f'{top_headlines_endpoint}').json
 # everything_endpoint_response = requests.get(f'{everything_endpoint}')
 
 class News:
-    def __init__(self):
+    # ------------------ ARTICLE TITLES ------------------ #
+    article_titles = []
+    for i in range(len(top_headlines_endpoint_response['articles'])):
+        article_titles.append(top_headlines_endpoint_response['articles'][i]['title'])
 
-        # ------------------ ARTICLE TITLES ------------------ #
-        self.article_titles = []
-        for i in range(len(top_headlines_endpoint_response['articles'])):
-            self.article_titles.append(top_headlines_endpoint_response['articles'][i]['title'])
+    # ------------------ ARTICLE DESCRIPTIONS ------------------ #
 
-        # ------------------ ARTICLE DESCRIPTIONS ------------------ #
+    article_descriptions = []
+    for i in range(len(top_headlines_endpoint_response['articles'])):
+        article_descriptions.append(top_headlines_endpoint_response['articles'][i]['description'])
 
-        self.article_descriptions = []
-        for i in range(len(top_headlines_endpoint_response['articles'])):
-            self.article_descriptions.append(top_headlines_endpoint_response['articles'][i]['description'])
+    # ------------------ ARTICLE AUTHORS ------------------ #
 
-        # ------------------ ARTICLE AUTHORS ------------------ #
+    article_authors = []
+    for i in range(len(top_headlines_endpoint_response['articles'])):
+        article_authors.append(top_headlines_endpoint_response['articles'][i]['author'])
 
-        self.article_authors = []
-        for i in range(len(top_headlines_endpoint_response['articles'])):
-            self.article_authors.append(top_headlines_endpoint_response['articles'][i]['author'])
+    # ------------------ ARTICLE URLS ------------------ #
 
-        # ------------------ ARTICLE URLS ------------------ #
+    article_urls = []
+    for i in range(len(top_headlines_endpoint_response['articles'])):
+        article_urls.append(top_headlines_endpoint_response['articles'][i]['url'])
 
-        self.article_urls = []
-        for i in range(len(top_headlines_endpoint_response['articles'])):
-            self.article_urls.append(top_headlines_endpoint_response['articles'][i]['url'])
+    # ------------------ ARTICLE IMG URLS ------------------ #
 
-        # ------------------ ARTICLE IMG URLS ------------------ #
+    article_img_urls = []
+    for i in range(len(top_headlines_endpoint_response['articles'])):
+        article_img_urls.append(top_headlines_endpoint_response['articles'][i]['urlToImage'])
 
-        self.article_img_urls = []
-        for i in range(len(top_headlines_endpoint_response['articles'])):
-            self.article_img_urls.append(top_headlines_endpoint_response['articles'][i]['urlToImage'])
+    # ------------------ ARTICLE CONTENT ------------------ #
+    article_content = []
+    for i in range(len(top_headlines_endpoint_response['articles'])):
+        article_content.append(top_headlines_endpoint_response['articles'][i]['content'])
 
-        # ------------------ ARTICLE CONTENT ------------------ #
-        self.article_content = []
-        for i in range(len(top_headlines_endpoint_response['articles'])):
-            self.article_content.append(top_headlines_endpoint_response['articles'][i]['content'])
-
-        # ------------------ ARTICLE PUBLISHED AT ------------------ #
-        self.article_published_at = []
-        for i in range(len(top_headlines_endpoint_response['articles'])):
-            self.article_published_at.append(top_headlines_endpoint_response['articles'][i]['publishedAt'])
+    # ------------------ ARTICLE PUBLISHED AT ------------------ #
+    article_published_at = []
+    for i in range(len(top_headlines_endpoint_response['articles'])):
+        article_published_at.append(top_headlines_endpoint_response['articles'][i]['publishedAt'])

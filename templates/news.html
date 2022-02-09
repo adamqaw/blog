@@ -3,20 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Adam Blog - News</title>
-    <link rel="stylesheet" href="/static/css/styles.css">
+    <link href="/static/css/styles.css" rel="stylesheet">
 </head>
 <body>
 
-<h1> Recent Stories</h1>
+<!--<div class="middle-container">-->
+<!--    <h1> Recent Stories</h1>-->
 
-{% for i in titles %}
-<h3>    {{ i }}</h3>
+<!--    {% for i in titles %}-->
+<!--    <h3> {{ i }}</h3>-->
+<!--    {% endfor %}-->
+<!--    -->
+<!--    {% for i in descriptions %}-->
+<!--    <p> {{ i }}</p>-->
+<!--    {% endfor %}-->
+<!--</div>-->
+
+<div class="middle-container">
+    <h1>Recent stories</h1>
+
+    {% for article in articles %}
+
+    <h3> {{ article.title }}</h3>
+    <p> {{ article.description }} </p>
+    <span> By {{ article.author }} on {{ article.date }}</span>
+
     {% endfor %}
-{% for i in descriptions %}
-<p> {{ i }}</p>
-{% endfor %}
-
-
+</div>
 
 
 </body>

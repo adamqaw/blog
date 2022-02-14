@@ -25,3 +25,7 @@ WiP portfolio blog. No bootstrap, no HTML templates, no CSS templates, Flask bac
 - Added db model to main.py (will be moved to a models.py file, along with other db models, if any)
 - The program will check if the date of last db entry is equal to today's date. If it is not, it will delete all rows to make way to append the new news headlines.
 - Need to expand on weather API page by adding graphics and to display basic info on index.html, then detailed information on weather.html
+
+### Feb 14 2022 Commit notes:
+- Changed news.html to include links that open articles in a new tab and also displays a picture from the article (if available).
+- 

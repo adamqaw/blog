@@ -4,29 +4,28 @@
     <meta charset="UTF-8">
     <title>Adam Blog - News</title>
     <link href="/static/css/styles.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
+          type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+          rel='stylesheet' type='text/css'>
 </head>
 <body>
 
-<!--<div class="middle-container">-->
-<!--    <h1> Recent Stories</h1>-->
-
-<!--    {% for i in titles %}-->
-<!--    <h3> {{ i }}</h3>-->
-<!--    {% endfor %}-->
-<!--    -->
-<!--    {% for i in descriptions %}-->
-<!--    <p> {{ i }}</p>-->
-<!--    {% endfor %}-->
-<!--</div>-->
-
-<div class="middle-container">
+<div class="news-1 middle-container">
     <h1>Recent stories</h1>
 
     {% for article in articles %}
+    <div class="grid-container">
+        <div class="grid-item">
+            <h3><a href="{{ article.url }}" target="_blank" rel="noreferrer"> {{ article.title }}</a></h3>
+            <p> {{ article.description }} </p>
+            <p> By {{ article.author }} on {{ article.date }}</p>
+        </div>
+        <div class="grid-item">
+            <img class="article-img" src="{{ article.img_url }}" alt="(No image available)">
+        </div>
 
-    <h3> {{ article.title }}</h3>
-    <p> {{ article.description }} </p>
-    <span> By {{ article.author }} on {{ article.date }}</span>
+    </div>
 
     {% endfor %}
 </div>

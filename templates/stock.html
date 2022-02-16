@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adam Blog - Stocks </title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+
+{% for s in stock %}
+<div class="middle-container">
+<h1> {{ s.symbol }} </h1>
+    <p> {{ s.open }} </p>
+    <p> {{ s.high }} </p>
+    <p> {{ s.low }} </p>
+    <p> {{ s.close }} </p>
+    <p> {{ s.volume }} </p>
+    <p> {{ s.date }} </p>
+
+</div>
+
+
+</body>
+</html>

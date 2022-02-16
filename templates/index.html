@@ -33,7 +33,12 @@
           <form action="{{url_for('weather')}}"><button class="btn">Weather API</button></form>
       </div>
       <div class="grid-item">
-        Finance API
+<!--        Finance API-->
+          <form action="{{ url_for('stocks') }}">
+              <label for="stock-name">Search for a stock:</label><br>
+              <input type="text" name="stock-name" placeholder="e.g. AAPL, GOOG, etc."><br>
+              <input type="submit" value="Search">
+          </form>
       </div>
       <div class="grid-item">
         Books API

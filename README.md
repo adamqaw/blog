@@ -28,4 +28,14 @@ WiP portfolio blog. No bootstrap, no HTML templates, no CSS templates, Flask bac
 
 ### Feb 14 2022 Commit notes:
 - Changed news.html to include links that open articles in a new tab and also displays a picture from the article (if available).
-- 
+
+### Feb 16 2022 Dev Commit notes:
+- Added stock.py to configure API 
+- Added stocks.html to display stock info
+- Updated Stock API grid on index to include input form (styles need to be added)
+- Added logic and functionality for stock grid on main.py
+- Added new @app.route for stocks.html
+- Added new db Model to store stock data using date, tickers, etc. Need to implement company name for aesthetic purposes.
+- Added stockQuery form for inputting use in forms.py
+-
+** Need to find out why stock data is not being inputted into the StockHistory table.

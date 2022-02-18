@@ -38,6 +38,7 @@ WiP portfolio blog. No bootstrap, no HTML templates, no CSS templates, Flask bac
 - Added new db Model to store stock data using date, tickers, etc. Need to implement company name for aesthetic purposes.
 - Added stockQuery form for inputting use in forms.py
 -
-** Need to find out why stock data is not being inputted into the StockHistory table.
-** Update: Stock object not subscriptable because endpoint not taking in info
-** Update: Not subscriptable because API was not taking the date format
+** Need to find out why stock data is not being inputted into the StockHistory table. ❓
+** Update: Stock object not subscriptable because endpoint not taking in info ❓
+** Update: Not subscriptable because API was not taking the date format ❓
+** Update: Worked when converted today to yesterday as market data for current day was not available ✅

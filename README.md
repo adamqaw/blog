@@ -39,3 +39,4 @@ WiP portfolio blog. No bootstrap, no HTML templates, no CSS templates, Flask bac
 - Added stockQuery form for inputting use in forms.py
 -
 ** Need to find out why stock data is not being inputted into the StockHistory table.
+** Update: Stock object not subscriptable because endpoint not taking in info

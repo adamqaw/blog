@@ -44,4 +44,4 @@ WiP portfolio blog. No bootstrap, no HTML templates, no CSS templates, Flask bac
 ** Update: Worked when converted today to yesterday as market data for current day was not available ✅
 
 ** Need to find our why stock data is not being added to db ❓
-
+** Update: When isolating the db model into a test.py and adding the data from the response into the db, it works.

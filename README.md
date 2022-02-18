@@ -40,7 +40,7 @@ WiP portfolio blog. No bootstrap, no HTML templates, no CSS templates, Flask bac
 -
 ** Need to find out why stock data is not being inputted into the StockHistory table. ❓
 ** Update: Stock object not subscriptable because endpoint not taking in info ❓
-**Update: Not subscriptable because API was not taking the date format ❓
+** Update: Not subscriptable because API was not taking the date format ❓
 ** Update: Worked when converted today to yesterday as market data for current day was not available ✅
 
 ** Need to find our why stock data is not being added to db ❓

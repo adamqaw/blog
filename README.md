@@ -50,5 +50,5 @@ WiP portfolio blog. No bootstrap, no HTML templates, no CSS templates, Flask bac
 ### Feb 18 2022 Dev Commit notes:
 ** Update: When isolating the db model into a test.py and adding the data from the response into the db, it works.
 ** Had to delete and restart the database to progress
-** Response data is not not found and therefore nothing added to db.
+** Response data is not not found and therefore nothing added to db; returns KeyError
 

@@ -30,4 +30,4 @@ WiP portfolio blog. No bootstrap, no HTML templates, no CSS templates, Flask bac
 - Changed news.html to include links that open articles in a new tab and also displays a picture from the article (if available).
 
 ### March 19 Notes:
- - Fixing the stocks microservice to add new stock info by changing the backend process to "/" and redirecting to "/stocks".
+ - Fixing the stocks microservice to add new stock info by changing the backend process to "/" and redirecting to "/stocks". (STILL IN PROGRESS)
